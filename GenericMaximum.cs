@@ -8,6 +8,10 @@ namespace TestMaximum
 {
     public class GenericMaximum<T> where T : IComparable
     {
+        /// <summary>
+        /// Find Maximum by Generic
+        /// </summary>
+        /// Variables
         public T firstValue, secondValue, thirdValue;
 
         public GenericMaximum(T firstValue, T secondValue, T thirdValue)
