@@ -6,15 +6,17 @@ namespace TestMaximum
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("TC-1.1");
-            string MaximumString = MaxString.FindMaxString("hello", "hi", "hey");
-            Console.WriteLine(MaximumString);
-            Console.WriteLine("TC-1.2");
-            MaximumString = MaxString.FindMaxString("good morning", "good aternoon", "good night");
-            Console.WriteLine(MaximumString);
-            Console.WriteLine("TC-1.3");
-            MaximumString = MaxString.FindMaxString("bye", "good bye", "take care");
-            Console.WriteLine(MaximumString);
+            GenericMaximum<int> MaxInt = new GenericMaximum<int>(63, 45, 34);
+            int maxValue = MaxInt.MaxMethod();
+            Console.WriteLine(maxValue);
+            Console.WriteLine("-----------");
+            GenericMaximum<double> MaxDouble = new GenericMaximum<double>(19.003, 19.1, 19.00003);
+            double maxDouble = MaxDouble.MaxMethod();
+            Console.WriteLine(maxDouble);
+            Console.WriteLine("-----------");
+            GenericMaximum<string> MaxString = new GenericMaximum<string>("hello", "hi", "good bye");
+            string MaxValue = MaxString.MaxMethod();
+            Console.WriteLine(MaxString);
         }
     }
 }
