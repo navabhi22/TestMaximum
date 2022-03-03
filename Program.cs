@@ -6,17 +6,17 @@ namespace TestMaximum
     {
         static void Main(string[] args)
         {
-            GenericMaximum<int> MaxInt = new GenericMaximum<int>(63, 45, 34);
-            int maxValue = MaxInt.MaxMethod();
-            Console.WriteLine(maxValue);
-            Console.WriteLine("-----------");
-            GenericMaximum<double> MaxDouble = new GenericMaximum<double>(19.003, 19.1, 19.00003);
-            double maxDouble = MaxDouble.MaxMethod();
-            Console.WriteLine(maxDouble);
-            Console.WriteLine("-----------");
-            GenericMaximum<string> MaxString = new GenericMaximum<string>("hello", "hi", "good bye");
-            string MaxValue = MaxString.MaxMethod();
-            Console.WriteLine(MaxString);
+            int[] arr = { 54, 63, 56, 65, 45 };
+            MaxBySort<int> genericInt = new MaxBySort<int>(arr);
+            genericInt.PrintMaxValue();
+
+            double[] floatArr = { 54.88343, 54.3435, 55.000001, 54.333333, 54.333334 };
+            MaxBySort<double> genericFloat = new MaxBySort<double>(floatArr);
+            genericFloat.PrintMaxValue();
+
+            string[] strArr = { "hello", "hey", "hi", "bye", "goog evening" };
+            MaxBySort<string> genericString = new MaxBySort<string>(strArr);
+            genericString.PrintMaxValue();
         }
     }
 }
