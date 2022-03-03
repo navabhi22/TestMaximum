@@ -7,15 +7,14 @@ namespace TestMaximum
         static void Main(string[] args)
         {
             Console.WriteLine("TC-1.1");
-            int MaxInt = MaxInteger.FindMaxInteger(78, 45, 12);
-            Console.WriteLine(MaxInt);
+            double MaximumFloat = MaxFloat.FindMaxFloat(24.89, 24.877, 23.355);
+            Console.WriteLine(MaximumFloat);
             Console.WriteLine("TC-1.2");
-            MaxInt = MaxInteger.FindMaxInteger(23, 38, 12);
-            Console.WriteLine(MaxInt);
+            MaximumFloat = MaxFloat.FindMaxFloat(19.459, 19.877, 19.002);
+            Console.WriteLine(MaximumFloat);
             Console.WriteLine("TC-1.3");
-            MaxInt = MaxInteger.FindMaxInteger(23, 45, 66);
-            Console.WriteLine(MaxInt);
-
+            MaximumFloat = MaxFloat.FindMaxFloat(19.959, 19.377, 20.002);
+            Console.WriteLine(MaximumFloat);
         }
     }
 }
